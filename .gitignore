@@ -27,3 +27,4 @@ pnpm-debug.log*
 # Temporary screenshots & testing artifacts
 screenshots/
 screenshot-*.png
+
