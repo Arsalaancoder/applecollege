@@ -86,8 +86,8 @@ export const appleCollegeConfig = {
   address:
     'Bandlaguda Cross Road, Mandal: Keesara, Nagaram, Hyderabad, Medchal Dist., Telangana State - 500083',
   shortAddress: 'Bandlaguda Cross Road, Nagaram, Hyderabad - 500083',
-  phones: ['+91 93464 10606', '+91 94943 52950'],
-  whatsappDigits: '919346410606',
+  phones: ['+91 94943 52950', '+91 93464 10606'],
+  whatsappDigits: '919494352950',
   email: 'info@applecollege.in',
   mapUrl:
     'https://maps.google.com/?q=Bandlaguda+Cross+Road+Keesara+Nagaram+Hyderabad+500083',
