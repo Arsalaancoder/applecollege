@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: "Outfit", "Saira", system-ui, sans-serif;
+  --font-saira: "Saira", sans-serif;
+  --color-medova-navy: #132847;
+  --color-medova-navy-dark: #0E1D33;
+  --color-medova-coral: #FF5E5E;
+  --color-medova-coral-hover: #EE4B4B;
+  --color-medova-blue: #2A7FBA;
+  --color-medova-cyan: #38B6FF;
+  --color-medova-mint: #EAF5EE;
+  --color-medova-pink: #FFF0F0;
+  --color-medova-green: #EBF7EE;
+  --color-medova-yellow: #FEF7E2;
+  --color-surface-light: #F5F7FC;
+  --color-slate-body: #475569;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
+
+  body {
+    color: #475569;
+    background-color: #ffffff;
+    overflow-x: hidden;
+  }
+}
+
+/* Medova subtle hexagonal healthcare lattice */
+.bg-hex-pattern {
+  background-color: #F8F9FD;
+  background-image: url("data:image/svg+xml,%3Csvg width='56' height='98' viewBox='0 0 56 98' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23132847' stroke-opacity='0.04' stroke-width='1'%3E%3Cpath d='M28 0L56 16.33v32.67L28 65.33 0 49V16.33z'/%3E%3Cpath d='M28 65.33L56 81.67V98H0V81.67z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Subtle architectural grid for deep navy hero backdrop */
+.bg-hero-grid {
+  background-image:
+    radial-gradient(circle at 82% 38%, rgba(42, 127, 186, 0.28), transparent 48%),
+    radial-gradient(circle at 18% 75%, rgba(255, 94, 94, 0.12), transparent 42%),
+    linear-gradient(to right, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 54px 54px, 54px 54px;
+}
+
+/* Hide horizontal scrollbar on mobile carousel while keeping smooth scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Seamless Infinite Marquee */
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 32s linear infinite;
+}
+
+.animate-marquee-fast {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 22s linear infinite;
+}
+
+.animate-marquee:hover,
+.animate-marquee-fast:hover {
+  animation-play-state: paused;
+}
